@@ -6,10 +6,22 @@ public class GrabStock {
 		StockGrabber stockGrabber = new StockGrabber();
 		
 		StockObserver observer1 = new StockObserver(stockGrabber);
+		StockObserver observer2 = new StockObserver(stockGrabber);
 		
-		stockGrabber.setIBMPrice(197.00);
-		stockGrabber.setAAPLPrice(677.60);
-		stockGrabber.setGOOPrice(676.40);
+		
+	
+		
+		
+		Runnable getIBM = new GetTheStock(stockGrabber, 2, "IBM", 197.00);
+		Runnable getAAPL = new GetTheStock(stockGrabber, 2, "AAPL", 677.60);
+		Runnable getGOO = new GetTheStock(stockGrabber, 2, "GOO", 676.40);
+		
+		
+		new Thread(getIBM).start();
+		new Thread(getAAPL).start();
+		new Thread(getGOO).start();
+		
+		
 	}
 
 }

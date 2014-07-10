@@ -21,7 +21,7 @@ public class StockObserver implements Observer {
 	
 	@Override
 	public void update(double ibmPrice, double aaplPrice, double gooPrice) {
-		this.applPrice = applPrice;
+		this.applPrice = aaplPrice;
 		this.gooPrice = gooPrice;
 		this.ibmPrice = ibmPrice;
 		
