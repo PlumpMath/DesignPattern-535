@@ -2,4 +2,4 @@ DesignPattern
 =============
 
 
-Implement all pratical design patterns as studying example.
+Implement all pratical design patterns as studying examples.
