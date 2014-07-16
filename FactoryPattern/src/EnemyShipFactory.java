@@ -1,4 +1,5 @@
 
+//The factory method
 public class EnemyShipFactory {
 	public EnemyShip makeEnemyShip(String newShipType){
 		EnemyShip newShip = null;
